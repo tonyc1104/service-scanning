@@ -13,7 +13,7 @@ IP_LIST_FILE=$1
 run_nmap_scan1() {
     local ip=$1
     echo "Running nmap against IP: $ip with options: -sC -sV -T4 -Pn --max-retries 1 --max-scan-delay 20"
-    nmap -sC -sV -T4 -Pn --max-retries 1 --max-scan-delay 20 "$ip" -oG nmap_output
+    nmap -sC -sV -T4 -Pn --max-retries 3 --max-scan-delay 20 "$ip" -oG nmap_output
 }
 
 # Function to run the second nmap scan
